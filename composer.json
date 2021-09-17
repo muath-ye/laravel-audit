@@ -1,0 +1,56 @@
+{
+  "name": "muath-ye/laravel-audit",
+  "description": "A wonderful requests auditing interface for Laravel.",
+  "keywords": [
+    "muath-ye",
+    "laravel",
+    "audit"
+  ],
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Muath Alsowadi",
+      "email": "muath.ye@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "maximebf/debugbar": "^1.16.3",
+    "illuminate/routing": "^6|^7|^8",
+    "illuminate/session": "^6|^7|^8",
+    "illuminate/support": "^6|^7|^8",
+    "symfony/debug": "^4.3|^5",
+    "symfony/finder": "^4.3|^5"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.3.3",
+    "orchestra/testbench-dusk": "^4|^5|^6",
+    "phpunit/phpunit": "^8.5|^9.0",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Muathye\\Audit\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Muathye\\Audit\\ServiceProvider"
+      ],
+      "aliases": {
+        "Audit": "Muathye\\Audit\\Support\\Facade"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "version": "1.0.0"
+}
